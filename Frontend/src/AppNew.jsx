@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import Navbar from "./components/Layout/Navbar";
@@ -14,9 +14,8 @@ const App = () => {
     <Router>
       <CartProvider>
         <div className={darkMode ? "dark" : ""}>
-          <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+          <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<MenuPage />} />
